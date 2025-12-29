@@ -15,6 +15,12 @@ function App() {
           Hover over me to see another tooltip
         </Tooltip>
       </p>
+
+      <button>
+        <Tooltip text="Tooltip for button">
+          Hover over this button
+        </Tooltip>
+      </button>
     </div>
   );
 }
