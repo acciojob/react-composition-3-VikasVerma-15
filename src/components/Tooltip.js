@@ -11,19 +11,19 @@ function Tooltip({ text, children }) {
 
   const tooltipStyle = {
     visibility: visible ? "visible" : "hidden",
-    opacity: visible ? 0.9 : 0,
+    opacity: visible ? 1 : 0,
     backgroundColor: "black",
-    color: "#fff",
+    color: "white",
     textAlign: "center",
     padding: "5px 8px",
     borderRadius: "4px",
     position: "absolute",
-    zIndex: 1,
     bottom: "125%",
     left: "50%",
     transform: "translateX(-50%)",
     whiteSpace: "nowrap",
     fontSize: "14px",
+    zIndex: 10,
     transition: "opacity 0.2s ease-in-out"
   };
 
@@ -35,7 +35,9 @@ function Tooltip({ text, children }) {
       onMouseLeave={() => setVisible(false)}
     >
       {children}
-      <div className="tooltiptext" style={tooltipStyle}>{text}</div>
+      <div className="tooltiptext" style={tooltipStyle}>
+        {text}
+      </div>
     </div>
   );
 }
