@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-function Tooltip({ text, children }) {
+function Tooltip({ text, children, alwaysRender = false }) {
   const [visible, setVisible] = useState(false);
 
   const containerStyle = {
     display: "inline-block",
     position: "relative",
-    cursor: "pointer"
+    cursor: "pointer",
   };
 
   const tooltipStyle = {
@@ -24,7 +24,7 @@ function Tooltip({ text, children }) {
     whiteSpace: "nowrap",
     fontSize: "14px",
     zIndex: 10,
-    transition: "opacity 0.2s ease-in-out"
+    transition: "opacity 0.2s ease-in-out",
   };
 
   return (
@@ -35,9 +35,11 @@ function Tooltip({ text, children }) {
       onMouseLeave={() => setVisible(false)}
     >
       {children}
-      <div className="tooltiptext" style={tooltipStyle}>
-        {text}
-      </div>
+      {(alwaysRender || visible) && (
+        <div className="tooltiptext" style={tooltipStyle}>
+          {text}
+        </div>
+      )}
     </div>
   );
 }
