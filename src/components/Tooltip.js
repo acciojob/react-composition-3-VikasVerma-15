@@ -21,6 +21,3 @@ function Tooltip({ text, children }) {
 }
 
 export default Tooltip;
-
-
-export default Tooltip;
