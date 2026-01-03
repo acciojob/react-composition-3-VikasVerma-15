@@ -4,23 +4,19 @@ import Tooltip from "./Tooltip";
 function App() {
   return (
     <div style={{ padding: "50px" }}>
-      <h2>
-        <Tooltip text="This is a tooltip" alwaysRender={false}>
-          Hover over me
-        </Tooltip>
-      </h2>
+      
+      <Tooltip text="This is a tooltip">
+        <h2>Hover over me</h2>
+      </Tooltip>
 
-      <p>
-        <Tooltip text="Paragraph tooltip" alwaysRender={false}>
-          Hover over me to see another tooltip
-        </Tooltip>
-      </p>
+      <Tooltip text="Paragraph tooltip">
+        <p>Hover over me to see another tooltip</p>
+      </Tooltip>
 
-      <button>
-        <Tooltip text="Button tooltip" alwaysRender={false}>
-          Hover over this button
-        </Tooltip>
-      </button>
+      <Tooltip text="Button tooltip">
+        <button>Hover over this button</button>
+      </Tooltip>
+
     </div>
   );
 }
