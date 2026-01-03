@@ -4,7 +4,6 @@ import Tooltip from "./Tooltip";
 function App() {
   return (
     <div style={{ padding: "50px" }}>
-      
       <Tooltip text="This is a tooltip">
         <h2>Hover over me</h2>
       </Tooltip>
@@ -16,7 +15,6 @@ function App() {
       <Tooltip text="Button tooltip">
         <button>Hover over this button</button>
       </Tooltip>
-
     </div>
   );
 }
