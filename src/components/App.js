@@ -5,26 +5,22 @@ function App() {
   return (
     <div style={{ padding: "50px" }}>
       
-      <h2 className="tooltip">
-        <Tooltip text="This is a tooltip">
-          This is a tooltip
-        </Tooltip>
-      </h2>
+      <Tooltip text="This is a tooltip">
+        <h2>Hover over me</h2>
+      </Tooltip>
 
-      <p className="tooltip">
-        <Tooltip text="This is another tooltip">
-          This is a another tooltip
-        </Tooltip>
-      </p>
+      <Tooltip text="This is another tooltip">
+        <p>Hover over me to see another tooltip</p>
+      </Tooltip>
 
-      <button className="tooltip">
-        <Tooltip text="Button tooltip">
-          Hover over me to see another tooltip
-        </Tooltip>
-      </button>
+      <Tooltip text="Button tooltip">
+        <button>Hover over this button</button>
+      </Tooltip>
 
     </div>
   );
 }
 
 export default App;
+
+
