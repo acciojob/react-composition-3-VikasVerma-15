@@ -7,15 +7,11 @@ function Tooltip({ text, children }) {
     className: "tooltip",
     onMouseEnter: () => setShow(true),
     onMouseLeave: () => setShow(false),
-    children: (
-      <>
-        {children.props.children}
-        {show && <div className="tooltiptext">{text}</div>}
-      </>
-    )
+    children: show ? <div>{text}</div> : children.props.children
   });
 }
 
 export default Tooltip;
+
 
 
