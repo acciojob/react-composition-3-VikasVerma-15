@@ -10,14 +10,11 @@ function Tooltip({ text, children }) {
     children: (
       <>
         {children.props.children}
-        {visible && (
-          <div className="tooltiptext">
-            {text}
-          </div>
-        )}
+        {visible && <div>{text}</div>}
       </>
     )
   });
 }
 
 export default Tooltip;
+
